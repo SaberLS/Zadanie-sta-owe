@@ -12,23 +12,23 @@
         <nav class="p-6 bg-white flex justify-between">
             <ul class="flex items-center">
                 <li>
-                    <a href="" class="p-3">Home</a>
+                    <a href="{{ route('home') }}" class="p-3">Home</a>
                 </li>
                 <li>
-                    <a href="" class="p-3">Dashboard</a>                
-                </li>
-                <li>
-                    <a href="" class="p-3">Post</a>                
+                    <a href="{{ route('dashboard') }}" class="p-3">Dashboard</a>                
                 </li>
             </ul>
 
             <ul class="flex items-center">
                @auth
                     <li>
-                        <a href="" class="p-3">Name</a>
+                        <a href="" class="p-3">{{ auth()->user()->name }} {{ auth()->user()->nazwisko }}</a>
                     </li>
                     <li>
-                        <a href="" class="p-3">Login</a>                
+                        <form action="{{ route('logout') }}" method="post">
+                            @csrf
+                            <button type="submitt" class="p-3">Logout</button>
+                        </form>            
                     </li>
                 @endauth
 
@@ -37,7 +37,7 @@
                         <a href=" {{ route('register') }}" class="p-3">Register</a>                
                     </li>
                     <li>
-                        <a href="" class=" {{ route('login') }}">Login</a>                
+                        <a href="{{ route('login') }}" class="p-3">Login</a>             
                     </li>
                 @endguest
 
