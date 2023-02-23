@@ -22,7 +22,7 @@ class RegisterController extends Controller
         'name' => 'required|max:255',
         'nazwisko' => 'required|max:255',
         'email' => 'required|email|max:255',
-        'telefon' => 'required|numeric|digits:9',
+        'telefon' => 'required|max:12',
         'password' => 'required|confirmed',
       ]);
 

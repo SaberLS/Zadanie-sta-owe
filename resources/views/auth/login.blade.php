@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="flex justify-center">
+    <div class="flex justify-center mt-7">
         <div class="w-4/12 bg-white p-6 rounded-lg">
             @if (session('status'))
                 <div class="bg-red-500 p-4 rounded-lg mb-6 text-white text-center">
@@ -25,7 +25,7 @@
                     @enderror
                 
 
-                <div class="mb-4">
+                <div class="mb-4 mt-2">
                     <label for="password" class="sr-only">Hasło</label>
                     <input type="password" name="password" id="password" placeholder="Hasło" class="bg-gray-100 border -2 w-full p-4 rounded-lg" value="">
                 
